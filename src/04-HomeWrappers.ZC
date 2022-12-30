@@ -34,3 +34,36 @@ public U0 SysCls()
 {//Clear System terminal.
 	Sys("DocClear;\n");
 }
+#define STD_BOOTHDINS	"\nc\np1\n\n\n\n"
+
+
+public U0 bi()
+{// BootHDIns
+  In(STD_BOOTHDINS);
+  BootHDIns;
+}
+
+public U0 rb()
+{
+  Reboot;
+}
+
+public I64 ll()
+{
+  return Dir;
+}
+
+public I64 ls(U8 * dir)
+{
+  return Dir(dir);
+}
+
+public I64 cd(U8 * dir)
+{
+  return Cd(dir);
+}
+
+public I64 rm(U8 * dir)
+{
+  return Del(dir);
+}
